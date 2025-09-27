@@ -1,0 +1,96 @@
+/* Sidebar Container */
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #f2f4f8);
+  padding: 20px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: max (1vw,10px);
+}
+
+/* Options Container */
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Single Option */
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-option:hover {
+  background-color: yellow;
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Icons */
+.sidebar-option img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Text */
+.sidebar-option p {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Optional: Active Style */
+.sidebar-option.active {
+  background-color: #007bff;
+}
+
+.sidebar-option.active p {
+  color: white;
+}
+
+.sidebar-option.active img {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive View */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .sidebar-options {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sidebar-option {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sidebar-option p {
+    font-size: 13px;
+    text-align: center;
+  }
+}
